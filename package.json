@@ -6,12 +6,16 @@
   "scripts": {
     "start": "node --env-file=.env ./src/app.js",
     "start:dev": "node --env-file=.env ./src/app.js",
-    "test": "test"
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "Ervin Osuna",
   "license": "ISC",
   "dependencies": {
     "express": "4.21.2",
     "mongoose": "^8.12.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

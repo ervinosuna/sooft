@@ -35,7 +35,7 @@ async function getCompanyByIdController (req, res) {
   }
 };
 
-async function getCompaniesCreatedLastMonth() {
+async function getCompaniesCreatedLastMonth(req, res) {
   try {
     const company = await companyServices.getCompanyByLastMonth();
     if (company) {

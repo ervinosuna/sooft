@@ -2,6 +2,7 @@ node_modules/
 data/
 .env
 package-lock.json
+coverage/
 
 # Archivos del sistema operativo y editores
 .DS_Store

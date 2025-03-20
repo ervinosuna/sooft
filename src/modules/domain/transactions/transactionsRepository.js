@@ -7,7 +7,7 @@ async function create(transferData) {
 
 
 async function findAllByLastMonth(startDate, endDate) {
-  const result = await Transfer.aggregate([
+  return await Transfer.aggregate([
     { $match: { operationDate: { $gte: startDate, $lt: endDate } } },
     { $lookup: { 
         from: "companies", 
@@ -20,7 +20,6 @@ async function findAllByLastMonth(startDate, endDate) {
       $unwind: "$company" 
     }
   ]);
-  return result;
 }
 
 async function findTransferId() {

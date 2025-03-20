@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post("/", createCompanyController);
 router.get("/", getAllCompaniesController);
+router.get("/last/", getCompaniesCreatedLastMonth);
 router.get("/:id", getCompanyByIdController);
-router.get("/last", getCompaniesCreatedLastMonth);
 
 module.exports = router;
