@@ -1,6 +1,5 @@
 const companyServices = require('../../../modules/application/company/companyServices');
 
-
 async function createCompanyController (req, res) {
   try {
     const companyData = req.body;
@@ -16,7 +15,7 @@ async function getAllCompaniesController (req, res){
     const companies = await companyServices.getAllCompanies();
     res.json(companies);
   } catch (error) {
-    res.status(500).json({ error: "Error getting companies 1" });
+    res.status(500).json({ error: "Error getting companies" });
   }
 };
 
@@ -36,9 +35,22 @@ async function getCompanyByIdController (req, res) {
   }
 };
 
+async function getCompaniesCreatedLastMonth() {
+  try {
+    const company = await companyServices.getCompanyByLastMonth();
+    if (company) {
+      res.json(company);
+    } else {
+      res.status(404).json({ error: "Company no found" });
+    }
+  } catch (error) {
+    res.status(500).json({ error: "Error getting company" });
+  }
+}
 
 module.exports = {
   createCompanyController,
   getAllCompaniesController,
   getCompanyByIdController,
+  getCompaniesCreatedLastMonth,
 };
