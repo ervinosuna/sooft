@@ -1,0 +1,17 @@
+{
+  "name": "sooft",
+  "version": "1.0.0",
+  "description": "challenger",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --env-file=.env ./src/app.js",
+    "start:dev": "node --env-file=.env ./src/app.js",
+    "test": "test"
+  },
+  "author": "Ervin Osuna",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.21.2",
+    "mongoose": "^8.12.1"
+  }
+}
