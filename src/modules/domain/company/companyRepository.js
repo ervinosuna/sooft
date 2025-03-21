@@ -1,20 +1,19 @@
-const Company = require('../../../infra/database/mongo/models/companyModel');
+const companyRepository = require('../../../infra/repositories/companyRepository');
 
 async function create(companyData) {
-  const newCompany = new Company(companyData);
-  return await newCompany.save();
+  return await companyRepository.create(companyData);
 }
 
 async function findAll() {
-  return await Company.find();
+  return await companyRepository.findAll();
 }
 
 async function findById(companyId) {
-  return await Company.findOne({ companyId: companyId });
+  return await companyRepository.findById(companyId);
 }
 
 async function findByLastMonth(month) {
-  return await Company.find({ joinDate: { $gte: month } });
+  return await companyRepository.findByLastMonth(month);
 }
 
 module.exports = { 
@@ -23,18 +22,3 @@ module.exports = {
   findById,
   findByLastMonth,
 };
-
-/* const db = require('../../../infra/database/data');
-
-const getAllCompanies = () => {
-  return db.companies;
-};
-
-const getCompanyById = (id) => {
-  return db.companies.find((company) => company.companyId === id) || null;
-};
-
-module.exports = { 
-  getAllCompanies,
-  getCompanyById,
-}; */

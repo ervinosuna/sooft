@@ -1,29 +1,17 @@
-const Transfer = require('../../../infra/database/mongo/models/transactionModel');
+const repositoryFactory = require('../../../infra/repositories/transactionsRepository');
+
 
 async function create(transferData) {
-  const newTransfer = new Transfer(transferData);
-  return await newTransfer.save();
+  return await repositoryFactory.create(transferData);
 }
 
 
 async function findAllByLastMonth(startDate, endDate) {
-  return await Transfer.aggregate([
-    { $match: { operationDate: { $gte: startDate, $lt: endDate } } },
-    { $lookup: { 
-        from: "companies", 
-        localField: "companyId", 
-        foreignField: "companyId",
-        as: "company" 
-      } 
-    },
-    { 
-      $unwind: "$company" 
-    }
-  ]);
+  return await repositoryFactory.findAllByLastMonth(startDate, endDate);
 }
 
 async function findTransferId() {
-  return await Transfer.findOne().sort({ transferId: -1 });
+  return await repositoryFactory.findLatestId();
 }
 
 module.exports = {
