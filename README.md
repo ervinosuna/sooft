@@ -46,6 +46,12 @@ npm test
 npm run test:watch
 ```
 
+## 🛠 Postman Collection  
+Para probar la API con Postman:  
+1. Abre Postman.  
+2. Ve a **File → Import**.  
+3. Selecciona `postman/collection.json`.  
+
 ## Autor
 - Ervin Osuna
 
