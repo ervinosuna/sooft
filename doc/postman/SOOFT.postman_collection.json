@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "95226520-491f-4205-a059-01fcd41356fd",
+		"name": "SOOFT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15067254",
+		"_collection_link": "https://lively-robot-628741.postman.co/workspace/Epidata~102375a6-153b-4198-8010-57d544429a54/collection/15067254-95226520-491f-4205-a059-01fcd41356fd?action=share&source=collection_link&creator=15067254"
+	},
+	"item": [
+		{
+			"name": "Get all Companies",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/companies",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  Transfer last Month",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/companies",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  Companies Last Month",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/companies",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get  Transfer last Month Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/companies/last",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"companies",
+								"last"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "297"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"129-pp1cFyYhsyn1kq4dkNmjAvj8UiI\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Mar 2025 23:15:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"67dc3aaf9f22b038a54d27ec\",\n        \"companyId\": 2,\n        \"taxId\": \"30-12345678-8\",\n        \"businessName\": \"Compañia 2\",\n        \"joinDate\": \"2025-02-25T00:00:00.000Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"67dc5d89570c477f273f35a3\",\n        \"companyId\": 3,\n        \"taxId\": \"30-12345678-8\",\n        \"businessName\": \"Compañia 2\",\n        \"joinDate\": \"2025-03-05T00:00:00.000Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get one Company",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/companies/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Company",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyId\": 3,\r\n    \"taxId\": \"30-12345678-8\",\r\n    \"businessName\": \"Compañia 2\",\r\n    \"joinDate\": \"2025-01-02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/companies",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"companies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear Company",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyId\": 3,\r\n    \"taxId\": \"30-12345678-8\",\r\n    \"businessName\": \"Compañia 2\",\r\n    \"joinDate\": \"2025-01-02\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/companies",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"companies"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "147"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"93-Oks7Gdejzc/HRcOomNQGZTxC+WM\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Mar 2025 18:25:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"companyId\": 3,\n    \"taxId\": \"30-12345678-8\",\n    \"businessName\": \"Compañia 2\",\n    \"joinDate\": \"2025-01-02T00:00:00.000Z\",\n    \"_id\": \"67dc5d89570c477f273f35a3\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Creat Transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"companyId\": 1,\r\n    \"debitAccount\": 1234,\r\n    \"creditAccount\": 5678,\r\n    \"amount\": 5000,\r\n    \"totalAmount\": 4500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/transfers",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transfers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear Company Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"companyId\": 2,\r\n  \"debitAccount\": \"123-456-777\",\r\n  \"creditAccount\": \"987-654-321\",\r\n  \"amount\": 7000,\r\n  \"totalAmount\": 7000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/transfers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"transfers"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "206"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ce-/4p5tV0PRLeZyT3lUCdRElRnEZY\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 20 Mar 2025 22:06:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"transferId\": 3,\n    \"companyId\": 2,\n    \"debitAccount\": \"123-456-777\",\n    \"creditAccount\": \"987-654-321\",\n    \"amount\": 7000,\n    \"operationDate\": \"2025-03-20T22:06:56.691Z\",\n    \"totalAmount\": 7000,\n    \"_id\": \"67dc918036b6f3a1dfdcbaa3\",\n    \"__v\": 0\n}"
+				}
+			]
+		}
+	]
+}
